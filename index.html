@@ -338,7 +338,9 @@ Error generating stack: `+o.message+`
         }
 
         .video-wrapper {
-          width: 100%;
+          width: min(100%, calc(56vh * 9 / 16));
+          margin-left: auto;
+          margin-right: auto;
           aspect-ratio: 9 / 16;
           overflow: hidden;
           border-radius: 12px;
@@ -352,6 +354,26 @@ Error generating stack: `+o.message+`
           height: 100%;
           object-fit: cover;
           display: block;
+        }
+
+        .medal-wrap {
+          display: flex;
+          justify-content: center;
+          margin: 2px 0 14px;
+        }
+        .medal-wrap svg {
+          width: 112px;
+          height: auto;
+          filter: drop-shadow(0 6px 14px rgba(0,0,0,0.22));
+          transform-origin: 50% 4%;
+          animation: medal-sway 4.5s ease-in-out infinite;
+        }
+        @keyframes medal-sway {
+          0%, 100% { transform: rotate(-2.5deg); }
+          50%      { transform: rotate(2.5deg); }
+        }
+        @media (prefers-reduced-motion: reduce) {
+          .medal-wrap svg { animation: none; }
         }
 
         .letter-content {
@@ -453,7 +475,7 @@ Error generating stack: `+o.message+`
           .envelope { height: 200px; }
           .letter { width: 92vw; padding: 16px; max-height: 90vh; }
         }
-      `}),oe("div",{className:"alps","aria-hidden":!0,children:[N("div",{className:"mountain m1"}),N("div",{className:"mountain m2"}),N("div",{className:"mountain m3"}),N("div",{className:"mountain m4"}),N("div",{className:"snow",style:{left:"10%",top:"12%"}}),N("div",{className:"snow",style:{left:"60%",top:"8%"}})]}),oe("header",{className:"header",children:[N("h1",{children:"Tadeo x Racing Mundial Austria"}),N("p",{children:"Austria 2026 • Ride Your Dream"})]}),oe("div",{className:"center-stage",children:[N("div",{className:`envelope-wrap ${e?"open":""}`,children:oe("div",{className:"envelope",onClick:()=>n(!e),role:"button","aria-label":e?"Cerrar carta":"Abrir carta",children:[N("div",{className:"flap"}),N("div",{className:"envelope-inner-shadow"}),N("div",{className:"fold-line"}),oe("div",{className:"envelope-front",children:[oe("svg",{className:"bike-svg",viewBox:"0 0 120 60",fill:"none",xmlns:"http://www.w3.org/2000/svg","aria-hidden":!0,children:[N("circle",{cx:"26",cy:"42",r:"14",stroke:"#1c2a26",strokeWidth:"2.2"}),N("circle",{cx:"94",cy:"42",r:"14",stroke:"#1c2a26",strokeWidth:"2.2"}),N("path",{d:"M26 42 L44 18 L70 18 L94 42 M44 18 L52 42 M70 18 L52 42 M66 14 L74 14",stroke:"#1c2a26",strokeWidth:"2.2",strokeLinecap:"round",strokeLinejoin:"round"}),N("circle",{cx:"44",cy:"18",r:"2.5",fill:"#1c2a26"}),N("path",{d:"M70 18 L78 8",stroke:"#1c2a26",strokeWidth:"2.2",strokeLinecap:"round"})]}),N("div",{className:"mundial-text",children:"MUNDIAL AUSTRIA 2026"}),N("div",{className:"flags",children:"\uD83C\uDDE6\uD83C\uDDF9 \uD83C\uDFC1"}),oe("div",{className:"stamp",children:["RACE",N("br",{}),"DAY"]})]})]})}),!e&&oe("div",{className:"tap-hint",children:[N("span",{className:"dot"})," Tap para abrir"]}),N("button",{className:`action-btn ${e?"secondary":""}`,onClick:()=>n(!e),style:{width:"min(360px, 86vw)",marginTop:e?80:22,position:"relative",zIndex:6},children:e?"Cerrar carta":"Abrir carta"})]}),N("div",{className:`backdrop ${e?"open":""}`,onClick:()=>n(!1)}),oe("article",{className:`letter ${e?"open":""}`,"aria-hidden":!e,children:[N("div",{className:"video-wrapper",children:N("video",{src:"video.mp4",controls:!0,loop:!0,playsInline:!0,preload:"metadata"})}),oe("div",{className:"letter-content",children:[N("div",{className:"saludo",children:"Enano,"}),N("p",{children:"Te hablamos desde hace un par de horas atrás... Queríamos desearte un súper buen viaje, que la pases súper bien allá, que aproveches toda la experiencia de poder ir a Europa a montar."}),oe("p",{children:["Que te diviertas, ",N("span",{className:"highlight",children:"que no te lastimes mucho pero aviéntate, salta, sé feliz"}),"... Vas a tener la experiencia de montar en Europa, así que mándanos muchos videos."]}),oe("p",{children:["Acuérdate siempre: ",N("span",{className:"highlight",children:"diviértete bajando, no hay nada mejor que montar divirtiéndote."})," Acá te esperamos cuando vuelvas. Te vamos a extrañar."]}),N("p",{className:"closing",children:"— Con todo el flow para Austria \uD83C\uDDE6\uD83C\uDDF9\uD83C\uDFC1"})]}),N("button",{className:"action-btn",onClick:()=>n(!1),children:"Cerrar carta"})]})]})}jc.createRoot(document.getElementById("root")).render(N(Vc.default.StrictMode,{children:N(Ji,{})}));
+      `}),oe("div",{className:"alps","aria-hidden":!0,children:[N("div",{className:"mountain m1"}),N("div",{className:"mountain m2"}),N("div",{className:"mountain m3"}),N("div",{className:"mountain m4"}),N("div",{className:"snow",style:{left:"10%",top:"12%"}}),N("div",{className:"snow",style:{left:"60%",top:"8%"}})]}),oe("header",{className:"header",children:[N("h1",{children:"Tadeo x Racing Mundial Austria"}),N("p",{children:"Austria 2026 • Ride Your Dream"})]}),oe("div",{className:"center-stage",children:[N("div",{className:`envelope-wrap ${e?"open":""}`,children:oe("div",{className:"envelope",onClick:()=>n(!e),role:"button","aria-label":e?"Cerrar carta":"Abrir carta",children:[N("div",{className:"flap"}),N("div",{className:"envelope-inner-shadow"}),N("div",{className:"fold-line"}),oe("div",{className:"envelope-front",children:[oe("svg",{className:"bike-svg",viewBox:"0 0 120 60",fill:"none",xmlns:"http://www.w3.org/2000/svg","aria-hidden":!0,children:[N("circle",{cx:"26",cy:"42",r:"14",stroke:"#1c2a26",strokeWidth:"2.2"}),N("circle",{cx:"94",cy:"42",r:"14",stroke:"#1c2a26",strokeWidth:"2.2"}),N("path",{d:"M26 42 L44 18 L70 18 L94 42 M44 18 L52 42 M70 18 L52 42 M66 14 L74 14",stroke:"#1c2a26",strokeWidth:"2.2",strokeLinecap:"round",strokeLinejoin:"round"}),N("circle",{cx:"44",cy:"18",r:"2.5",fill:"#1c2a26"}),N("path",{d:"M70 18 L78 8",stroke:"#1c2a26",strokeWidth:"2.2",strokeLinecap:"round"})]}),N("div",{className:"mundial-text",children:"MUNDIAL AUSTRIA 2026"}),N("div",{className:"flags",children:"\uD83C\uDDE6\uD83C\uDDF9 \uD83C\uDFC1"}),oe("div",{className:"stamp",children:["RACE",N("br",{}),"DAY"]})]})]})}),!e&&oe("div",{className:"tap-hint",children:[N("span",{className:"dot"})," Tap para abrir"]}),N("button",{className:`action-btn ${e?"secondary":""}`,onClick:()=>n(!e),style:{width:"min(360px, 86vw)",marginTop:e?80:22,position:"relative",zIndex:6},children:e?"Cerrar carta":"Abrir carta"})]}),N("div",{className:`backdrop ${e?"open":""}`,onClick:()=>n(!1)}),oe("article",{className:`letter ${e?"open":""}`,"aria-hidden":!e,children:[N("div",{className:"video-wrapper",children:N("video",{src:"video.mp4",controls:!0,loop:!0,playsInline:!0,preload:"metadata"})}),N("div",{className:"medal-wrap",dangerouslySetInnerHTML:{__html:`<svg viewBox="0 0 140 160" role="img" aria-label="Medalla Numero 1"><defs><linearGradient id="mg" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#f9e29a"/><stop offset="45%" stop-color="#d9a520"/><stop offset="100%" stop-color="#a9761a"/></linearGradient><linearGradient id="mr" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#fff6cd"/><stop offset="50%" stop-color="#c9971c"/><stop offset="100%" stop-color="#8c5f12"/></linearGradient></defs><g transform="rotate(-17 70 34)"><rect x="46" y="0" width="23" height="74" fill="#c21e1e"/><rect x="54" y="0" width="7" height="74" fill="#f7f3e8"/></g><g transform="rotate(17 70 34)"><rect x="71" y="0" width="23" height="74" fill="#c21e1e"/><rect x="79" y="0" width="7" height="74" fill="#f7f3e8"/></g><circle cx="70" cy="104" r="42" fill="url(#mr)"/><circle cx="70" cy="104" r="36" fill="url(#mg)"/><circle cx="70" cy="104" r="36" fill="none" stroke="#fff6cd" stroke-width="1" opacity="0.55"/><circle cx="70" cy="104" r="29" fill="none" stroke="#8c5f12" stroke-width="1.1" opacity="0.45" stroke-dasharray="3 3.5"/><text x="70" y="102" text-anchor="middle" font-family="Fraunces, Georgia, serif" font-size="36" font-weight="700" fill="#5a3d0a">1</text><path d="M16 110 L124 110 L115 122 L124 134 L16 134 L25 122 Z" fill="#0f1e1a"/><text x="70" y="127" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="12.5" font-weight="700" letter-spacing="1.6" fill="#e9c765">N&#218;MERO 1</text></svg>`}}),oe("div",{className:"letter-content",children:[N("div",{className:"saludo",children:"Ema,"}),oe("p",{children:["no te queremos mucho. Tenga un buen viaje y mantente ",N("span",{className:"highlight",children:"stay tuned for more updates"}),"."]})]}),N("button",{className:"action-btn",onClick:()=>n(!1),children:"Cerrar carta"})]})]})}jc.createRoot(document.getElementById("root")).render(N(Vc.default.StrictMode,{children:N(Ji,{})}));
 </script>
   <script>(function(){function m(a){var h=a.getAttribute("href");if(!h)return;try{var u=new URL(h,document.baseURI);if((u.protocol==="http:"||u.protocol==="https:")&&u.host!==location.host){a.target="_blank";a.rel="noopener noreferrer";}}catch(e){}}function s(){document.querySelectorAll("a[href]").forEach(m);}if(document.readyState!=="loading"){s();}else{document.addEventListener("DOMContentLoaded",s);}document.addEventListener("click",function(e){var a=e.target&&e.target.closest&&e.target.closest("a[href]");if(a){m(a);}},true);})();</script>
   
